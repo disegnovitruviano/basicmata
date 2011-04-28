@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta24.1.dtd" >
    <PATCH nodename="C:\Dokumente und Einstellungen\jl\Eigene Dateien\My Dropbox\BasicMata\vvvv\vvvv2BasicMata.v4p" locked="0">
-   <BOUNDS height="19005" left="10590" top="0" type="Window" width="11880">
+   <BOUNDS height="19110" left="10590" top="0" type="Window" width="11700">
    </BOUNDS>
    <NODE componentmode="InABox" id="0" nodename="IOBox (Value Advanced)">
    <BOUNDS height="100" left="4785" top="6780" type="Node" width="100">
