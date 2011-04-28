@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta24.1.dtd" >
-   <PATCH nodename="C:\Dokumente und Einstellungen\jl\Eigene Dateien\My Dropbox\BasicMata\vvvv\_root.v4p">
-   <BOUNDS height="10815" left="1215" top="0" type="Window" width="8355">
+   <PATCH nodename="C:\Dokumente und Einstellungen\jl\Eigene Dateien\basicmata\vvvv\_root.v4p">
+   <BOUNDS height="10815" left="1350" top="6105" type="Window" width="8355">
    </BOUNDS>
    <NODE componentmode="InABox" id="20" nodename="IOBox (Value Advanced)">
    <BOUNDS height="100" left="510" top="3645" type="Node" width="100">
@@ -136,7 +136,7 @@
    <PIN pinname="Y Output Value" visible="1">
    </PIN>
    </NODE>
-   <NODE componentmode="InAWindow" id="103" nodename="vvvv2BasicMata.v4p" path="C:\Dokumente und Einstellungen\jl\Eigene Dateien\My Dropbox\BasicMata\vvvv\">
+   <NODE componentmode="InAWindow" id="103" nodename="vvvv2BasicMata.v4p" path="C:\Dokumente und Einstellungen\jl\Eigene Dateien\basicmata\vvvv\">
    <BOUNDS height="100" left="1740" top="6795" type="Node" width="100">
    </BOUNDS>
    <PIN pinname="PWM Output" visible="1">
@@ -153,7 +153,7 @@
    </PIN>
    <PIN pinname="Digital Input" visible="1">
    </PIN>
-   <BOUNDS height="19110" left="10590" top="0" type="Window" width="11700">
+   <BOUNDS height="19110" left="25560" top="3525" type="Window" width="11700">
    </BOUNDS>
    </NODE>
    <LINK dstnodeid="103" dstpinname="Enabled" srcnodeid="84" srcpinname="Y Output Value">

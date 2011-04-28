@@ -153,7 +153,7 @@
    </PIN>
    <PIN pinname="Digital Input" visible="1">
    </PIN>
-   <BOUNDS height="19005" left="10590" top="0" type="Window" width="11880">
+   <BOUNDS height="19110" left="10590" top="0" type="Window" width="11700">
    </BOUNDS>
    </NODE>
    <LINK dstnodeid="103" dstpinname="Enabled" srcnodeid="84" srcpinname="Y Output Value">
@@ -171,7 +171,7 @@
    </BOUNDS>
    <BOUNDS height="420" left="5025" top="5490" type="Box" width="2670">
    </BOUNDS>
-   <PIN pinname="Input String" slicecount="1" visible="0" values="|richtigen Comport einstellen|">
+   <PIN pinname="Input String" slicecount="1" visible="0" values="|choose the right comport|">
    </PIN>
    <PIN pinname="Output String" visible="0">
    </PIN>
