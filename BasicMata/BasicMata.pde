@@ -61,7 +61,7 @@ int sensorValues[9] = {
 void setup() 
 { 
   // Setup serial Communication 
-  Serial.begin(57600); 
+  Serial.begin(115200); 
 
   // Setup Pin modes
 
