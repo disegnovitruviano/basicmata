@@ -1,0 +1,16 @@
+#summary One-sentence summary of this page.
+
+= Introduction =
+
+BasicMata is A simple way to interface an arduino over serial protocol from any software. It's based on the Idea of Firmata (http://firmata.org/wiki/Main_Page) but won't allow you to change any setting. Therfore the Code is as simple as possible! It's thought for people how just want to get going as fast as possible,without the need and possibility to configure anything from outside the Arduino IDE.
+
+Jochen Leinberger, http://www.explorative-environments.net/ Date 20110428, 11:38pm, 
+
+
+== Concept ==
+
+The BasicMata Communication protocol is based on the concep of Ping Pong. Which means whenever the comuter send a new valid set with data to the Arduino, the arduino replies with a record of all actual read values
+
+== Protocoll ==
+
+== Pinouts ==
