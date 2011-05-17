@@ -20,19 +20,19 @@ Do forever:
 
 {{{0x13 0x10 pwm00 pwm01 pwm02 pwm03 pwm04 pwm05 do0 do1 do2}}}
 
-  *All Values ascii coded.
-  *No seperation signs.
-  *pwm: 0-255
-  *do: LOW=0, HIGH=255
+  * All Values ascii coded.
+  * No seperation signs.
+  * pwm: 0-255
+  * do: LOW=0, HIGH=255
 
 *2. PONG Reveice the latest Readings from the Arduino:*
 
 {{{@ an00 | an01 | an02 | an03 | an04 | an05 | di00 | di01 | di02 0x13 0x10}}}
 
-  *All Values as Strings.
-  *Pipe as seperation sign.
-  *an: 0-1024
-  *di: LOW=0, HIGH=1
+  * All Values as Strings.
+  * Pipe as seperation sign.
+  * an: 0-1024
+  * di: LOW=0, HIGH=1
 
 http://basicmata.googlecode.com/files/basicmata-pinmapping.jpg
 
