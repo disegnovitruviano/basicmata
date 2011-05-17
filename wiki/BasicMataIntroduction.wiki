@@ -1,4 +1,4 @@
-#summary One-sentence summary of this page.
+<wiki:toc max_depth="1" />
 
 = Introduction =
 
@@ -33,8 +33,7 @@ Do forever:
   * Pipe as seperation sign.
   * an: 0-1024
   * di: LOW=0, HIGH=1
-
-http://basicmata.googlecode.com/files/basicmata-pinmapping.jpg
+http://basicmata.googlecode.com/files/basic-mata-yED-Graph.jpg
 
 == Pinouts - Where to connect what! ==
 
