@@ -14,3 +14,4 @@ The BasicMata Communication protocol is based on the concep of Ping Pong. Which 
 == Protocoll ==
 
 == Pinouts ==
+http://basicmata.googlecode.com/files/basicmata-pinmapping.jpg
