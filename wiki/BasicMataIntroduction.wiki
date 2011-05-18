@@ -15,6 +15,9 @@ This allows to controll the polling rate from the media software and prevent it 
 
 == Protocoll - Its as simple as PING and PONG ! ==
 
+Serial speed is set to 115200baud
+{{{Serial.begin(115200);}}}
+
 Do forever:
 
 *1. PING: Send Outputs to Arduino:*
@@ -37,5 +40,7 @@ Do forever:
 http://basicmata.googlecode.com/files/basic-mata-yED-Graph.jpg
 
 == Pinouts - Where to connect what! ==
+
+Digital Input Pins have their pullup resistors switched on.
 
 http://basicmata.googlecode.com/files/basicmata-pinmapping.jpg
