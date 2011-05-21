@@ -24,7 +24,7 @@ Do forever:
 *1. PING: Send Outputs to Arduino:*
 
 {{{
-0x13 0x10 @ pwm00 pwm01 pwm02 pwm03 pwm04 pwm05 do0 do1 do2 $
+0x13 0x10 @ 0xpwm00 0xpwm01 0xpwm02 0xpwm03 0xpwm04 0xpwm05 0xdo0 0xdo1 0xdo2 $
 }}}
 
   * All Values ascii coded.
@@ -43,7 +43,7 @@ All values are split in modulo 255 and hole multiples of 255 with this lines of 
 }}}
 
 {{{
-@ a01m a01h  a02m a02h a03m a03h a04m a04h a05m a05h a06m a06h d01m d01h d01m d01h d02m d02h d03m d03h x13 x10
+@ 0xa01m 0xa01h 0xa02m 0xa02h 0xa03m 0xa03h 0xa04m 0xa04h 0xa05m 0xa05h 0xa06m 0xa06h 0xd01m 0xd01h 0xd01m 0xd01h 0xd02m 0xd02h 0xd03m 0xd03h 0x13 0x10
 }}}
 
  All Values as Bytes. No seperation string. Fixed length: 23 Bytes
