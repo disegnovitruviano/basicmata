@@ -63,8 +63,8 @@
           <y:Geometry height="63.416000000000025" width="414.5333333333332" x="146.67282000000057" y="-220.0336337499999"/>
           <y:Fill hasColor="false" transparent="false"/>
           <y:BorderStyle color="#000000" type="line" width="1.0"/>
-          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" hasText="false" height="4.0" modelName="internal" modelPosition="c" textColor="#000000" visible="true" width="4.0" x="205.2666666666666" y="29.708000000000013"/>
-          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="18.701171875" modelName="internal" modelPosition="c" textColor="#000000" visible="true" width="51.35546875" x="181.5889322916666" y="22.357414062500013">Software</y:NodeLabel>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" hasText="false" height="4.0" modelName="internal" modelPosition="c" textColor="#000000" visible="true" width="4.0" x="205.2666666666666" y="29.708"/>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="18.701171875" modelName="internal" modelPosition="c" textColor="#000000" visible="true" width="51.35546875" x="181.5889322916666" y="22.3574140625">Software</y:NodeLabel>
         </y:GenericNode>
       </data>
     </node>
@@ -85,8 +85,8 @@
           <y:Geometry height="288.64166666666665" width="268.875" x="232.95615333333382" y="509.4086212499998"/>
           <y:Fill hasColor="false" transparent="false"/>
           <y:BorderStyle color="#000000" type="line" width="1.0"/>
-          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" hasText="false" height="4.0" modelName="internal" modelPosition="c" textColor="#000000" visible="true" width="4.0" x="132.4375" y="142.32083333333327"/>
-          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="18.701171875" modelName="internal" modelPosition="c" textColor="#000000" visible="true" width="45.361328125" x="111.7568359375" y="134.97024739583327">Arduino</y:NodeLabel>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" hasText="false" height="4.0" modelName="internal" modelPosition="c" textColor="#000000" visible="true" width="4.0" x="132.4375" y="142.32083333333333"/>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="18.701171875" modelName="internal" modelPosition="c" textColor="#000000" visible="true" width="45.361328125" x="111.7568359375" y="134.97024739583333">Arduino</y:NodeLabel>
         </y:GenericNode>
       </data>
     </node>
@@ -104,7 +104,7 @@
     <node id="n5">
       <data key="d6">
         <y:GenericNode configuration="com.yworks.flowchart.process">
-          <y:Geometry height="182.16599999999997" width="414.5333333333332" x="-70.45149541666567" y="206.9773487499998"/>
+          <y:Geometry height="182.16599999999997" width="414.5333333333332" x="-70.45149541666567" y="141.98050591911755"/>
           <y:Fill hasColor="false" transparent="false"/>
           <y:BorderStyle color="#000000" type="line" width="1.0"/>
           <y:NodeLabel alignment="left" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="33.40234375" modelName="internal" modelPosition="tl" textColor="#000000" visible="true" width="219.40234375" x="4.0" y="4.0">01.Outputs:
@@ -120,14 +120,21 @@ do: LOW=0, HIGH=255</y:NodeLabel>
     <node id="n6">
       <data key="d6">
         <y:GenericNode configuration="com.yworks.flowchart.process">
-          <y:Geometry height="182.1659999999999" width="402.06285708333286" x="432.6905283333339" y="204.27227062499992"/>
+          <y:Geometry height="265.90247058823525" width="717.6063864950975" x="432.6905283333339" y="141.98050591911755"/>
           <y:Fill hasColor="false" transparent="false"/>
           <y:BorderStyle color="#000000" type="line" width="1.0"/>
           <y:NodeLabel alignment="left" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="48.103515625" modelName="internal" modelPosition="tl" textColor="#000000" visible="true" width="228.736328125" x="4.0" y="4.0">02.Readings:
  Arduino to Computer Telegramm (PONG)
      </y:NodeLabel>
-          <y:NodeLabel alignment="left" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="62.8046875" modelName="internal" modelPosition="c" textColor="#000000" visible="true" width="384.7421875" x="8.6603347916664" y="59.68065624999997">@ an00 | an01 | an02 | an03 | an04 | an05 | di00 | di01 | di02 0x13 0x10
-All Values as Strings. Pipe as seperation sign.
+          <y:NodeLabel alignment="left" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="165.712890625" modelName="internal" modelPosition="l" textColor="#000000" visible="true" width="698.6875" x="4.0" y="50.09478998161762">All values are split in modulo 255 and hole multiples of 255 with this lines of code:
+   SensorValuesMessage = sensorValues[i] % 255;
+   Serial.print(SensorValuesMessage); // the m(modulo) part
+   SensorValuesMessage = (sensorValues[i]-(sensorValues[i] % 255)) / 255;
+   Serial.print(SensorValuesMessage); // r(realmultiples) of 255
+
+@ a01m a01h  a02m a02h a03m a03h a04m a04h a05m a05h a06m a06h d01m d01h d01m d01h d02m d02h d03m d03h x13 x10
+
+ All Values as bytes. Pipe as seperation sign.
 an: 0-1024
 di: LOW=0, HIGH=1</y:NodeLabel>
         </y:GenericNode>
@@ -139,8 +146,8 @@ di: LOW=0, HIGH=1</y:NodeLabel>
           <y:Geometry height="63.416000000000025" width="197.0" x="268.8936533333339" y="509.4086212499999"/>
           <y:Fill hasColor="false" transparent="false"/>
           <y:BorderStyle color="#000000" type="line" width="1.0"/>
-          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" hasText="false" height="4.0" modelName="internal" modelPosition="c" textColor="#000000" visible="true" width="4.0" x="96.5" y="29.708000000000013"/>
-          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="18.701171875" modelName="internal" modelPosition="c" textColor="#000000" visible="true" width="54.015625" x="71.4921875" y="22.357414062500013">USB Port</y:NodeLabel>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" hasText="false" height="4.0" modelName="internal" modelPosition="c" textColor="#000000" visible="true" width="4.0" x="96.5" y="29.70799999999997"/>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="18.701171875" modelName="internal" modelPosition="c" textColor="#000000" visible="true" width="54.015625" x="71.4921875" y="22.35741406249997">USB Port</y:NodeLabel>
         </y:GenericNode>
       </data>
     </node>

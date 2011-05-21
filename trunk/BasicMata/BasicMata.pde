@@ -1,30 +1,30 @@
 /*
 BasicMata
-Date 20110428, 11:38pm, Jochen Leinberger
-http://www.explorative-environments.net/
-
-A simple way to talk to interface an arduino over serial protocol. 
-It's based on the Idea of Firmata (http://firmata.org/wiki/Main_Page) 
-but won't allow you change any setting. Therfore the Code is as simple 
-as possible! It's thought for people how just want to get going as fast 
-as possible,without the need and possibility to configure anything from 
-outside the Arduino IDE.
-
-
-Copyright  2011 Jochen Leinberger
-
-   Licensed under the Apache License, Version 2.0 (the "License");
-   you may not use this file except in compliance with the License.
-   You may obtain a copy of the License at
-
-       http://www.apache.org/licenses/LICENSE-2.0
-
-   Unless required by applicable law or agreed to in writing, software
-   distributed under the License is distributed on an "AS IS" BASIS,
-   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-   See the License for the specific language governing permissions and
-   limitations under the License.
-*/
+ Date 20110521, Jochen Leinberger
+ http://www.explorative-environments.net/
+ 
+ A simple way to talk to interface an arduino over serial protocol. 
+ It's based on the Idea of Firmata (http://firmata.org/wiki/Main_Page) 
+ but won't allow you change any setting. Therfore the Code is as simple 
+ as possible! It's thought for people how just want to get going as fast 
+ as possible,without the need and possibility to configure anything from 
+ outside the Arduino IDE.
+ 
+ 
+ Copyright  2011 Jochen Leinberger
+ 
+ Licensed under the Apache License, Version 2.0 (the "License");
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License at
+ 
+ http://www.apache.org/licenses/LICENSE-2.0
+ 
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
+ */
 
 
 //__________________//
@@ -36,7 +36,9 @@ int readState = 1; // kind of state automata needed to receive the messages.
 int didReceive = 0; // indicates wether if a new message was received.
 
 // Values needed to send serial Messages 
-String SensorValuesMessage = 'empty'; 
+//String SensorValuesMessage = 'empty'; 
+char SensorValuesMessage = 0;
+
 
 // Values needed to write Outputs
 int pwmOutPin[6] = {
@@ -199,15 +201,20 @@ void readSensors()
 
 void sendSensors()
 {
-  SensorValuesMessage = '@';
+  Serial.print('@');
   for (int i=0; i<9; i++)
   {
-   SensorValuesMessage = SensorValuesMessage + sensorValues[i] + "|";
+    SensorValuesMessage = sensorValues[i] % 255;
+    Serial.print(SensorValuesMessage); // the m(modulo) part
+    SensorValuesMessage = (sensorValues[i]-(sensorValues[i] % 255)) / 255;
+    Serial.print(SensorValuesMessage); // r(realmultiples) of 255
+    //   SensorValuesMessage = SensorValuesMessage + sensorValues[i] + "|";
   }
-
- SensorValuesMessage = SensorValuesMessage + '$';
- Serial.println(SensorValuesMessage);
+  Serial.println('$');
+  //SensorValuesMessage = SensorValuesMessage + '$';
+  //Serial.println(SensorValuesMessage);
 
   didReceive = 0; // change back did Receive
 }
+
 
