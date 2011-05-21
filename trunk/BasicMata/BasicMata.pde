@@ -204,11 +204,10 @@ void sendSensors()
   Serial.print('@');
   for (int i=0; i<9; i++)
   {
-    SensorValuesMessage = sensorValues[i] % 255;
-    Serial.print(SensorValuesMessage); // the m(modulo) part
-    SensorValuesMessage = (sensorValues[i]-(sensorValues[i] % 255)) / 255;
-    Serial.print(SensorValuesMessage); // r(realmultiples) of 255
-    //   SensorValuesMessage = SensorValuesMessage + sensorValues[i] + "|";
+    SensorValuesMessage = sensorValues[i] % 255;  // the m(modulo) part
+    Serial.print(SensorValuesMessage);
+    SensorValuesMessage = (sensorValues[i]-(sensorValues[i] % 255)) / 255; // r(realmultiples) of 255
+    Serial.print(SensorValuesMessage); 
   }
   Serial.println('$');
   //SensorValuesMessage = SensorValuesMessage + '$';
