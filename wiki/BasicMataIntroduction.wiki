@@ -43,4 +43,4 @@ http://basicmata.googlecode.com/files/basic-mata-yED-Graph.jpg
 
 Digital Input Pins have their pullup resistors switched on.
 
-http://basicmata.googlecode.com/files/basicmata-pinmapping.jpg
+https://basicmata.googlecode.com/svn/trunk/info/basicmata-pinmapping.jpg
