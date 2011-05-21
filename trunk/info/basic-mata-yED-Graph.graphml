@@ -106,7 +106,7 @@
         <y:GenericNode configuration="com.yworks.flowchart.process">
           <y:Geometry height="182.16599999999997" width="473.53200707338624" x="-129.45016915671874" y="141.98050591911755"/>
           <y:Fill hasColor="false" transparent="false"/>
-          <y:BorderStyle color="#000000" type="line" width="1.0"/>
+          <y:BorderStyle color="#339966" type="line" width="1.0"/>
           <y:NodeLabel alignment="left" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="33.40234375" modelName="internal" modelPosition="tl" textColor="#000000" visible="true" width="219.40234375" x="4.0" y="4.0">01.Outputs:
 Computer to Arduino Telegramm (PING)</y:NodeLabel>
           <y:NodeLabel alignment="left" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="77.505859375" modelName="internal" modelPosition="c" textColor="#000000" visible="true" width="415.591796875" x="28.97010509919312" y="52.33007031249997">Computer to Arduino Telegramm
@@ -122,7 +122,7 @@ do: LOW=0, HIGH=255</y:NodeLabel>
         <y:GenericNode configuration="com.yworks.flowchart.process">
           <y:Geometry height="265.90247058823525" width="717.6063864950975" x="432.6905283333339" y="141.98050591911755"/>
           <y:Fill hasColor="false" transparent="false"/>
-          <y:BorderStyle color="#000000" type="line" width="1.0"/>
+          <y:BorderStyle color="#339966" type="line" width="1.0"/>
           <y:NodeLabel alignment="left" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="48.103515625" modelName="internal" modelPosition="tl" textColor="#000000" visible="true" width="228.736328125" x="4.0" y="4.0">02.Readings:
  Arduino to Computer Telegramm (PONG)
      </y:NodeLabel>
