@@ -104,13 +104,13 @@
     <node id="n5">
       <data key="d6">
         <y:GenericNode configuration="com.yworks.flowchart.process">
-          <y:Geometry height="182.16599999999997" width="414.5333333333332" x="-70.45149541666567" y="141.98050591911755"/>
+          <y:Geometry height="182.16599999999997" width="473.53200707338624" x="-129.45016915671874" y="141.98050591911755"/>
           <y:Fill hasColor="false" transparent="false"/>
           <y:BorderStyle color="#000000" type="line" width="1.0"/>
           <y:NodeLabel alignment="left" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="33.40234375" modelName="internal" modelPosition="tl" textColor="#000000" visible="true" width="219.40234375" x="4.0" y="4.0">01.Outputs:
 Computer to Arduino Telegramm (PING)</y:NodeLabel>
-          <y:NodeLabel alignment="left" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="77.505859375" modelName="internal" modelPosition="c" textColor="#000000" visible="true" width="390.068359375" x="12.232486979166595" y="52.33007031249997">Computer to Arduino Telegramm
-"0x13 0x10 pwm00 pwm01 pwm02 pwm03 pwm04 pwm05 do0 do1 do2"
+          <y:NodeLabel alignment="left" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="77.505859375" modelName="internal" modelPosition="c" textColor="#000000" visible="true" width="415.591796875" x="28.97010509919312" y="52.33007031249997">Computer to Arduino Telegramm
+"0x13 0x10 @ pwm00 pwm01 pwm02 pwm03 pwm04 pwm05 do0 do1 do2 $"
 All Values ascii coded. No seperation signs.
 pwm: 0-255
 do: LOW=0, HIGH=255</y:NodeLabel>
@@ -127,10 +127,10 @@ do: LOW=0, HIGH=255</y:NodeLabel>
  Arduino to Computer Telegramm (PONG)
      </y:NodeLabel>
           <y:NodeLabel alignment="left" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="165.712890625" modelName="internal" modelPosition="l" textColor="#000000" visible="true" width="698.6875" x="4.0" y="50.09478998161762">All values are split in modulo 255 and hole multiples of 255 with this lines of code:
-   SensorValuesMessage = sensorValues[i] % 255;
-   Serial.print(SensorValuesMessage); // the m(modulo) part
-   SensorValuesMessage = (sensorValues[i]-(sensorValues[i] % 255)) / 255;
-   Serial.print(SensorValuesMessage); // r(realmultiples) of 255
+   SensorValuesMessage = sensorValues[i] % 255;  // the m(modulo) part
+   Serial.print(SensorValuesMessage);
+   SensorValuesMessage = (sensorValues[i]-(sensorValues[i] % 255)) / 255; // r(realmultiples) of 255
+   Serial.print(SensorValuesMessage); 
 
 @ a01m a01h  a02m a02h a03m a03h a04m a04h a05m a05h a06m a06h d01m d01h d01m d01h d02m d02h d03m d03h x13 x10
 
