@@ -5,8 +5,7 @@
 BasicMata is A simple way to interface an arduino over serial protocol from any software. It's based on the Idea of Firmata (http://firmata.org/wiki/Main_Page) but won't allow you to change any setting. Therfore the Code is as simple as possible and should all Arduinos with similar pins(most important are the PWM outputs Pins see Pinouts)! It's thought for people how just want to get going as fast as possible,without the need and possibility to configure anything from outside the Arduino IDE.
 
 Jochen Leinberger, http://www.explorative-environments.net/ 
-/20110518/08:42/
-
+/20110521/
 
 == Concept ==
 
@@ -16,27 +15,41 @@ This allows to controll the polling rate from the media software and prevent it 
 == Protocoll - Its as simple as PING and PONG ! ==
 
 Serial speed is set to 115200baud
-{{{Serial.begin(115200);}}}
+{{{
+Serial.begin(115200);
+}}}
 
 Do forever:
 
 *1. PING: Send Outputs to Arduino:*
 
-{{{0x13 0x10 pwm00 pwm01 pwm02 pwm03 pwm04 pwm05 do0 do1 do2}}}
+{{{
+0x13 0x10 @ pwm00 pwm01 pwm02 pwm03 pwm04 pwm05 do0 do1 do2 $
+}}}
 
   * All Values ascii coded.
-  * No seperation signs.
+  * No seperation strings.
   * pwm: 0-255
   * do: LOW=0, HIGH=255
 
 *2. PONG Reveice the latest Readings from the Arduino:*
 
-{{{@ an00 | an01 | an02 | an03 | an04 | an05 | di00 | di01 | di02 0x13 0x10}}}
+All values are split in modulo 255 and hole multiples of 255 with this lines of code:
+{{{
+   SensorValuesMessage = sensorValues[i] % 255;  // the m(modulo) part
+   Serial.print(SensorValuesMessage);
+   SensorValuesMessage = (sensorValues[i]-(sensorValues[i] % 255)) / 255; // r(realmultiples) of 255
+   Serial.print(SensorValuesMessage); 
+}}}
 
-  * All Values as Strings.
-  * Pipe as seperation sign.
-  * an: 0-1024
-  * di: LOW=0, HIGH=1
+{{{
+@ a01m a01h  a02m a02h a03m a03h a04m a04h a05m a05h a06m a06h d01m d01h d01m d01h d02m d02h d03m d03h x13 x10
+}}}
+
+ All Values as Bytes. No seperation string. Fixed length: 23 Bytes
+an: 0-1024
+di: LOW=0, HIGH=1
+
 
 https://basicmata.googlecode.com/svn/trunk/info/basic-mata-yED-Graph.jpg
 
