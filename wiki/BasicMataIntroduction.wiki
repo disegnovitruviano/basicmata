@@ -48,9 +48,11 @@ All values are split in modulo 255 and hole multiples of 255 with these lines of
 0xd01m 0xd01h 0xd01m 0xd01h 0xd02m 0xd02h 0xd03m 0xd03h $ 0x13 0x10 
 }}}
 
- All Values as Bytes. No seperation string. Fixed length: 23 Bytes
-an: 0-1024
-di: LOW=0, HIGH=1
+ * All Values as Bytes.
+ * No seperation string. 
+ * Fixed length: 23 Bytes
+ * an: 0-1024
+ * di: LOW=0, HIGH=1
 
 
 https://basicmata.googlecode.com/svn/trunk/info/basic-mata-yED-Graph.jpg
