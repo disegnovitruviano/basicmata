@@ -104,7 +104,7 @@
     <node id="n5">
       <data key="d6">
         <y:GenericNode configuration="com.yworks.flowchart.process">
-          <y:Geometry height="182.16599999999997" width="473.53200707338624" x="421.954301694439" y="162.40403533088232"/>
+          <y:Geometry height="182.16599999999997" width="473.53200707338624" x="-298.6391326489954" y="192.54292421977124"/>
           <y:Fill color="#99FF33" color2="#99FF33" transparent="false"/>
           <y:BorderStyle color="#000000" type="line" width="1.0"/>
           <y:NodeLabel alignment="left" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="32.265625" modelName="internal" modelPosition="tl" textColor="#000000" visible="true" width="236.76953125" x="4.0" y="4.0">01.Outputs:
@@ -120,7 +120,7 @@ do: LOW=0, HIGH=255</y:NodeLabel>
     <node id="n6">
       <data key="d6">
         <y:GenericNode configuration="com.yworks.flowchart.process">
-          <y:Geometry height="265.90247058823525" width="768.0376522779258" x="-374.20972419191855" y="162.40403533088232"/>
+          <y:Geometry height="265.90247058823525" width="768.0376522779258" x="268.8936533333338" y="150.67468892565358"/>
           <y:Fill color="#FF9999" color2="#FF9999" transparent="false"/>
           <y:BorderStyle color="#000000" type="line" width="1.0"/>
           <y:NodeLabel alignment="left" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="46.3984375" modelName="internal" modelPosition="tl" textColor="#000000" visible="true" width="246.431640625" x="4.0" y="4.0">02.Readings:
