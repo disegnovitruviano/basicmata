@@ -35,7 +35,7 @@ Do forever:
 
 *2. PONG Reveice the latest Readings from the Arduino:*
 
-All values are split in modulo 255 and hole multiples of 255 with this lines of code:
+All values are split in modulo 255 and hole multiples of 255 with these lines of code:
 {{{
    SensorValuesMessage = sensorValues[i] % 255;  // the m(modulo) part
    Serial.print(SensorValuesMessage);
