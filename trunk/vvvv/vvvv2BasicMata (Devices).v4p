@@ -1393,9 +1393,9 @@
    <LINK dstnodeid="99" dstpinname="Y Input Value" srcnodeid="198" srcpinname="Output">
    </LINK>
    <NODE componentmode="InABox" id="201" nodename="IOBox (Value Advanced)">
-   <BOUNDS height="100" left="2580" top="27720" type="Node" width="100">
+   <BOUNDS height="100" left="2505" top="27720" type="Node" width="100">
    </BOUNDS>
-   <BOUNDS height="1230" left="2580" top="27720" type="Box" width="795">
+   <BOUNDS height="1230" left="2505" top="27720" type="Box" width="795">
    </BOUNDS>
    <BOUNDS height="160" left="4770" top="8865" type="Window" width="215">
    </BOUNDS>
